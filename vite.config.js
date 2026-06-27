@@ -1,9 +1,32 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: 'dist'
-  }
+  plugins: [
+    react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      manifest: {
+        name: 'Cycle Tracker',
+        short_name: 'Cycles',
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#FAF5F0',
+        theme_color: '#2D1B33',
+        icons: [
+          {
+            src: 'https://placehold.co/192x192/2D1B33/C4A0C8?text=C',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'https://placehold.co/512x512/2D1B33/C4A0C8?text=C',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      }
+    })
+  ]
 })
