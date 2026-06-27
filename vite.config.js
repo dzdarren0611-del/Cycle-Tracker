@@ -15,18 +15,16 @@ export default defineConfig({
         background_color: '#FAF5F0',
         theme_color: '#2D1B33',
         icons: [
-          {
-            src: 'https://placehold.co/192x192/2D1B33/C4A0C8?text=C',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'https://placehold.co/512x512/2D1B33/C4A0C8?text=C',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    })
-  ]
-})
+  {
+    src: '/icon.svg',
+    sizes: '192x192',
+    type: 'image/svg+xml',
+    purpose: 'any maskable'
+  },
+  {
+    src: '/icon.svg',
+    sizes: '512x512',
+    type: 'image/svg+xml',
+    purpose: 'any maskable'
+  }
+]
