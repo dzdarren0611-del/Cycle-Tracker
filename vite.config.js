@@ -15,16 +15,23 @@ export default defineConfig({
         background_color: '#FAF5F0',
         theme_color: '#2D1B33',
         icons: [
-  {
-    src: '/icon.svg',
-    sizes: '192x192',
-    type: 'image/svg+xml',
-    purpose: 'any maskable'
-  },
-  {
-    src: '/icon.svg',
-    sizes: '512x512',
-    type: 'image/svg+xml',
-    purpose: 'any maskable'
+          {
+            src: '/icon.svg',
+            sizes: '192x192',
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
+          },
+          {
+            src: '/icon.svg',
+            sizes: '512x512',
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
+          }
+        ]
+      }
+    })
+  ],
+  build: {
+    outDir: 'dist'
   }
-]
+})
